@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    background-color: #1a1a1a;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+.animated-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?auto=compress&cs=tinysrgb&w=600') no-repeat center center / cover;
+    z-index: -1;
+    filter: brightness(0.3) blur(5px);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 0;
+}
+
+header {
+    padding: 2rem 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 4px 15px rgba(0, 255, 255, 0.3);
+    position: relative;
+    z-index: 10;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    color: #00ffff;
+    text-shadow: 0px 0px 5px #00ffff, 0px 0px 15px #00ffff;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+nav ul {
+    list-style: none;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-btn {
+    color: #00ffff;
+    text-decoration: none;
+    margin: 0 1.5rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-btn::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #ffffff;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s;
+}
+
+.nav-btn:hover::after {
+    width: 100%;
+}
+
+.section {
+    padding: 4rem 0;
+}
+
+h2 {
+    font-size: 2.8rem;
+    color: #00ffcc;
+    text-shadow: 0px 0px 10px #00ffcc;
+    margin-bottom: 1.5rem;
+}
+
+.courses, .posts {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.course, .post {
+    width: 280px;
+    padding: 1.5rem;
+    margin: 1rem;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.course:hover, .post:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+}
+
+form label, form input, form textarea, .form-btn {
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+    color: #fff;
+}
+
+form input, form textarea {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #00ffff;
+    background-color: #222;
+    color: #00ffff;
+    border-radius: 4px;
+}
+
+.form-btn {
+    background-color: #00ffff;
+    color: #333;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.form-btn:hover {
+    background-color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgb(255, 255, 255);
+}
+
+footer {
+    padding: 1rem;
+    background-color: #333;
+    color: #ffffff;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
